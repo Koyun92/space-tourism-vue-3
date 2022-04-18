@@ -2,12 +2,33 @@
     width: 100%;
     display: grid;
     text-align: center;
- 
+    &__title{
+        
+        @include flex-config($align-items:center,$justify-content:center);
+        letter-spacing:0.27rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+       
+
+        span{   
+            margin-right: 1.5rem;
+            opacity: 0.25;
+            font-weight: 400;
+            font-size: 1.6rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        }
+        h1{
+            font-weight: 400;
+            font-size: 1.6rem;
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+    }
+    &__second-title{
+        
+    }
     
     &__img{
-       img{
-           width: 50%;
-           
-       }
+        width: 50%;
+    
     }
 }

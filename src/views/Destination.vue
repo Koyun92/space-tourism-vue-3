@@ -1,6 +1,11 @@
 <template>
   <div class="destination">
+    <div class="subpage__title">
+      <span>01</span>
+      <h1>pick your destination</h1>
+    </div>
     <img
+      class="subpage__img"
       :src="
         require(`../assets${$route.path}/image-${
           data[this.currentIndex].name
@@ -20,7 +25,7 @@
       @slideChange="onSlide"
     >
       <swiper-slide v-for="data in data" :key="data.name">
-        <subpage :pagination="pagination" :data="data" />
+        <subpage :data="data" />
       </swiper-slide>
     </swiper>
   </div>
