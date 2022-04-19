@@ -1,4 +1,43 @@
 .destination{
     text-align: center;
+    &__slide-title{
+        font-size: 5.6rem;
+        text-transform: uppercase;
+    }
+    &__info{
+        padding: 1.5rem 0;
+        margin: 0 2rem;
+        border-top: 1px solid #000;
+    &-title{
+        h3{
+        color:$pagination-color;
+        font-size: 1.4rem;
+        letter-spacing: 0.236rem;
+        padding: 1rem 0;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+            }
+         
+        }
+        &-data{
+            color:$background-btn;
+            font-family: 'Bellefair', serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+        }
+    }
+
   
+
+}
+@media(min-width:768px){
+    .destination{
+        &__info{
+            @include flex-config($justify-content:center);
+           &-box{
+               padding:0 3rem;
+           }
+    }
+}
 }

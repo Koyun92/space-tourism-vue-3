@@ -1,7 +1,11 @@
 .subpage{
+
     width: 100%;
     display: grid;
     text-align: center;
+    &__wrapper{
+        margin-top: 3rem;
+    }
     &__title{
         
         @include flex-config($align-items:center,$justify-content:center);
@@ -23,9 +27,15 @@
             font-family: 'Barlow Condensed', sans-serif;
         }
     }
-    &__second-title{
-        
+    &__text{
+        color:$slide-text-color;
+        margin: 0 1.5rem;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        border-bottom: 2px solid $destination-brcolor;
     }
+   
     
     &__img{
         width: 50%;

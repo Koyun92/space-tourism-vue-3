@@ -1,5 +1,5 @@
 <template>
-  <div class="destination">
+  <div class="destination subpage__wrapper">
     <div class="subpage__title">
       <span>01</span>
       <h1>pick your destination</h1>
@@ -86,7 +86,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" >
 .swiper-pagination {
   position: static;
   display: flex;
@@ -96,14 +96,21 @@ export default {
   width: 100%;
 }
 .swiper-pagination-bullet {
+  color: hsla(231, 77%, 90%, 1);
+  letter-spacing: 0.235rem;
+  opacity: 1;
   width: 100%;
   height: 100%;
   padding-bottom: 1rem;
+  border-bottom: 1px solid transparent;
   background-color: transparent;
 }
 .swiper-pagination-bullet-active {
+  color: hsla(0, 0%, 100%, 1);
+
   background-color: transparent;
-  border-bottom: 1px solid hsl(231, 77%, 90%);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 1);
   border-radius: 0%;
 }
 </style>
+
