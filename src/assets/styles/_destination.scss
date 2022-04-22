@@ -7,7 +7,7 @@
     &__info{
         padding: 1.5rem 0;
         margin: 0 2rem;
-        border-top: 1px solid #000;
+        border-top: 2px solid $destination-brcolor;
     &-title{
         h3{
         color:$pagination-color;
@@ -40,4 +40,28 @@
            }
     }
 }
+}
+@media(min-width:1024px){
+    .destination{
+
+        width: 100%;
+        @include flex-config($justify-content:space-between );
+        flex-wrap:  wrap;
+       
+        &__slide-title{
+            margin-top: 4rem;
+            }
+           
+            &__info{
+                margin: 0;
+                padding-top: 4rem;
+                justify-content: space-between;
+                
+            }
+            &__info-box{
+               padding: 0;
+               
+            }
+    }
+
 }

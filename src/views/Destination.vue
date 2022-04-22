@@ -87,15 +87,17 @@ export default {
 </script>
 
 <style lang="css" >
-.swiper-pagination {
-  position: static;
-  display: flex;
+.destination .swiper-pagination {
+  position: static !important;
+  display: flex !important;
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
   width: 100%;
+  max-width: 400px;
+  margin: auto;
 }
-.swiper-pagination-bullet {
+.destination .swiper-pagination-bullet {
   color: hsla(231, 77%, 90%, 1);
   letter-spacing: 0.235rem;
   opacity: 1;
@@ -105,12 +107,29 @@ export default {
   border-bottom: 1px solid transparent;
   background-color: transparent;
 }
-.swiper-pagination-bullet-active {
+.destination .swiper-pagination-bullet-active {
   color: hsla(0, 0%, 100%, 1);
 
   background-color: transparent;
   border-bottom: 1px solid hsla(0, 0%, 100%, 1);
   border-radius: 0%;
+}
+@media (min-width: 1024px) {
+  .swiper {
+    display: flex;
+    flex-direction: column;
+
+    flex-basis: 45%;
+    margin: 0;
+  }
+  .swiper-pagination {
+    max-width: none;
+    padding: 0;
+    text-align: left;
+  }
+  .swiper-slide {
+    display: flex;
+  }
 }
 </style>
 

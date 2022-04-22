@@ -1,7 +1,6 @@
 .subpage{
 
     width: 100%;
-    display: grid;
     text-align: center;
     &__wrapper{
         margin-top: 3rem;
@@ -33,12 +32,56 @@
         padding-bottom: 2rem;
         font-size: 1.5rem;
         line-height: 2.5rem;
-        border-bottom: 2px solid $destination-brcolor;
+        
     }
    
     
     &__img{
-        width: 50%;
+        width: 45%;
     
+    }
+}
+@media(min-width:768px){
+    .subpage{
+        &__title{
+            @include flex-config($align-items:center,$justify-content:flex-start);
+            padding: 2rem;
+        }
+        &__text{
+            color:$slide-text-color;
+            margin: 0 10rem;
+           
+        }
+
+    }
+}
+@media(min-width:1024px){
+    .subpage{
+        flex-grow: 1;
+       @include flex-config($justify-content:space-between, $flex-direction:column);
+
+      &__wrapper{
+        padding: 4rem;
+      }
+        text-align: left;
+        &__text{
+            margin: 0;
+        }
+        &__wrapper{
+            max-width: 1200px;
+            margin: auto;
+            justify-content: center;
+         
+        }
+        &__title{
+            flex-basis: 100%;
+            flex-wrap: nowrap;
+        }
+        &__img{
+            flex-basis: 40%;
+        
+        }
+        
+
     }
 }
