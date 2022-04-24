@@ -3,10 +3,10 @@
   <div class="crew subpage__wrapper">
     <div class="subpage__title">
       <span>01</span>
-      <h1>pick your destination</h1>
+      <h1>meet your crew</h1>
     </div>
     <img
-      class="subpage__img"
+      class="subpage__img subpage__img--crew"
       :src="
         require(`../assets${$route.path}/image-${data[this.currentIndex].name
           .replace(' ', '-')
@@ -14,7 +14,6 @@
       "
       :alt="data.name"
     />
-
     <swiper
       ref="mySwiper"
       :pagination="pagination"
@@ -71,11 +70,6 @@ export default {
       onSlideChange,
       pagination: {
         clickable: true,
-        renderBullet: function (index, className) {
-          return `<span class="${className} swiper-pagination-bullet-custom">${
-            index + 1
-          }</span>`;
-        },
       },
 
       modules: [Pagination],
@@ -94,26 +88,22 @@ export default {
 .crew .swiper-pagination {
   position: static;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
   width: 100%;
   max-width: 400px;
   margin: auto;
+  border-top: 2px solid hsla(231, 15%, 26%, 1);
 }
 .crew .swiper-pagination-bullet {
-  color: red;
+  background-color: hsla(0, 0%, 100%, 0.17);
 
   opacity: 1;
-
-  padding-bottom: 1rem;
 }
 .crew .swiper-pagination-bullet-active {
-  color: hsla(0, 0%, 100%, 1);
-
-  background-color: transparent;
-  border-bottom: 1px solid hsla(0, 0%, 100%, 1);
-  border-radius: 0%;
+  border-radius: 100%;
+  background-color: hsla(0, 0%, 100%, 1);
 }
 @media (min-width: 1024px) {
   .swiper {

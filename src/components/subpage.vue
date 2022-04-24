@@ -1,7 +1,7 @@
 <template>
   <div class="subpage">
     <div class="subpage__header">
-      <div v-if="data.role" class="subpage__pretitle"></div>
+      <div v-if="data.role" class="subpage__pretitle">{{ data.role }}</div>
       <div class="subpage__lower-title">
         <h2 class="destination__slide-title" v-if="data.travel">
           {{ data.name }}
@@ -12,7 +12,8 @@
       </div>
     </div>
     <div class="subpage__text">
-      <p>{{ data.description }}</p>
+      <p v-if="data.description">{{ data.description }}</p>
+      <p v-else>{{ data.bio }}</p>
     </div>
     <div v-if="data.distance" class="destination__info">
       <div class="destination__info-box">
