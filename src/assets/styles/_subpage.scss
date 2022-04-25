@@ -3,19 +3,23 @@
     width: 100%;
     text-align: center;
     &__wrapper{
+        padding:0 3rem;
         margin-top: 3rem;
         text-align: center;
+        
     }
     &__pretitle{
         font-family: 'Bellefair', serif;
         font-weight: 400;
         text-transform: uppercase;
+        margin-bottom: 1rem;
     }
     &__lower-title{
         h2{
             text-transform: uppercase;
             font-size: 2.4rem;
             font-weight: 400;
+            margin-bottom: 1rem;
         }
     }
     &__title{
@@ -51,16 +55,21 @@
     
     &__img{
         width: 45%;
+        
         &--crew{
             width:auto;
             height: 200px;
+            order:1;
         }
+    
+
     }
 }
 @media(min-width:768px){
     .subpage{
         &__title{
-            @include flex-config($align-items:center,$justify-content:flex-start);
+            @include flex-config($align-items:flex-start,$justify-content:flex-start);
+            flex-basis: 100%;
             padding: 2rem;
         }
         &__text{
@@ -68,23 +77,73 @@
             margin: 0 10rem;
            
         }
+        &__pretitle{
+           font-size: 2.4rem;
+        }
+        &__lower-title{
+            h2{
+                font-size: 4rem;
+                margin-bottom: 1rem;
+            }
+        }
+        &__img{
+            &--crew{
+                width:auto;
+                height: 400px;
+                align-self: flex-end;
+            }
+        }
+        &__wrapper{
+            flex-grow: 1;
+            
+            
+         
+            
+        }
 
     }
 }
 @media(min-width:1024px){
     .subpage{
+        &__title{
+            margin-bottom: 10rem;
+            h1{
+                font-size: 2.8rem;
+            }
+            span{
+                font-size: 2.8rem;
+            }
+        }
+        height: 100%;
+        justify-content: space-between;
         flex-grow: 1;
-       @include flex-config($justify-content:space-between, $flex-direction:column);
+       
+     
+      
 
       &__wrapper{
+          flex-grow: 0;
+   
         padding: 4rem;
+        
       }
         text-align: left;
         &__text{
             margin: 0;
+            font-size: 1.8rem;
         }
+        &__pretitle{
+            font-size: 3.2rem;
+         }
+     
+         &__lower-title{
+             h2{
+                 font-size: 5.6rem;
+            
+             }
+         }
         &__wrapper{
-            max-width: 1200px;
+            max-width: 120rem;
             margin: auto;
             justify-content: center;
          
@@ -92,12 +151,17 @@
         &__title{
             flex-basis: 100%;
             flex-wrap: nowrap;
+            padding: 0;
         }
         &__img{
-            flex-basis: 40%;
+            height:45rem;
+            width: auto;
+         
+            
         
         }
         
 
     }
+ 
 }

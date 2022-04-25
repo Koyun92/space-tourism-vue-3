@@ -115,19 +115,21 @@ export default {
   border-radius: 0%;
 }
 @media (min-width: 1024px) {
-  .swiper {
+  .destination .swiper {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 
     flex-basis: 45%;
     margin: 0;
   }
-  .swiper-pagination {
+  .destination .swiper-pagination {
     max-width: none;
+    margin-bottom: 4rem;
     padding: 0;
     text-align: left;
   }
-  .swiper-slide {
+  .destination .swiper-slide {
     display: flex;
   }
 }

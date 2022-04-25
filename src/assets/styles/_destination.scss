@@ -1,5 +1,5 @@
 .destination{
-    text-align: center;
+   
     &__slide-title{
         font-size: 5.6rem;
         text-transform: uppercase;
@@ -49,17 +49,21 @@
         flex-wrap:  wrap;
        
         &__slide-title{
-            margin-top: 4rem;
+          
+            font-size: 10rem !important;
             }
            
             &__info{
                 margin: 0;
                 padding-top: 4rem;
                 justify-content: space-between;
+                align-self: flex-end;
+                flex-grow: 1;
                 
             }
             &__info-box{
                padding: 0;
+               
                
             }
     }

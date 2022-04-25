@@ -3,6 +3,7 @@
     margin-top: 3rem;
     text-align: center;
     flex-grow: 1;
+    overflow: hidden;
 
     &__title {
         font-size: 8rem;
@@ -28,6 +29,7 @@
         margin-top: 3rem;
         width: 15rem;
         height: 15rem;
+        margin-bottom: 5rem;
         border-radius: 50%;
         background-color: $background-btn;
         font-size: 2rem;
@@ -87,9 +89,12 @@
 }
 @media  (min-width:1024px){
     .home{
+        max-width: 1200px;
+        margin:auto;
         text-align: left;
         @include flex-config($flex-direction:row, $align-items:flex-end, $justify-content:space-between);
         margin-bottom: 15rem;
+        overflow:visible;
         
        padding: 0 5%;
         &__container{
@@ -117,6 +122,8 @@
             height: 27rem;
             font-size: 3.2rem;
             letter-spacing: 2px;
+            margin: 0;
+           
         }
     }
 }
