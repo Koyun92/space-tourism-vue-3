@@ -6,6 +6,9 @@
         padding:0 3rem;
         margin-top: 3rem;
         text-align: center;
+        &--technology{
+            padding: 0;
+        }
         
     }
     &__pretitle{
@@ -13,6 +16,9 @@
         font-weight: 400;
         text-transform: uppercase;
         margin-bottom: 1rem;
+        &-second{
+            display: none;
+        }
     }
     &__lower-title{
         h2{
@@ -21,6 +27,7 @@
             font-weight: 400;
             margin-bottom: 1rem;
         }
+      
     }
     &__title{
         
@@ -55,11 +62,18 @@
     
     &__img{
         width: 45%;
+       &-container{
+           font-size: 0;
+       }
         
         &--crew{
             width:auto;
             height: 200px;
             order:1;
+        }
+        &--technology{
+            width: 100vw;
+       
         }
     
 

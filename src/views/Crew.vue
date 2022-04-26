@@ -1,6 +1,6 @@
 
 <template>
-  <div class="crewTech subpage__wrapper">
+  <div class="crewTech crew subpage__wrapper">
     <div class="subpage__title">
       <span>01</span>
       <h1>meet your crew</h1>
@@ -86,7 +86,7 @@ export default {
 </script>
 
 <style lang="css" >
-.crewTech .swiper-pagination {
+.crew .swiper-pagination {
   position: static;
   display: flex;
   justify-content: center;
@@ -97,46 +97,48 @@ export default {
   margin: auto;
   border-top: 2px solid hsla(231, 15%, 26%, 1);
 }
-.crewTech .swiper-pagination-bullet {
+.crew .swiper-pagination-bullet {
   background-color: hsla(0, 0%, 100%, 0.17);
   opacity: 1;
+  margin: 0 1rem !important;
 }
 
-.crewTech .swiper-pagination-bullet-active {
+.crew .swiper-pagination-bullet-active {
   border-radius: 100%;
   background-color: hsla(0, 0%, 100%, 1);
 }
 @media (min-width: 768px) {
-  .crewTech .swiper {
+  .crew .swiper {
     display: flex;
     flex-direction: column;
     margin: 0;
   }
-  .crewTech .swiper-pagination-bullet {
+  .crew .swiper-pagination-bullet {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0 2rem !important;
   }
-  .crewTech .swiper-pagination {
+  .crew .swiper-pagination {
     order: 1;
     border-top: none;
     border-bottom: none;
   }
 }
 @media (min-width: 1024px) {
-  .crewTech .swiper {
+  .crew .swiper {
     display: flex;
     flex-direction: column;
 
     flex-basis: 45%;
     margin: 0;
   }
-  .crewTech .swiper-pagination {
+  .crew .swiper-pagination {
     max-width: none;
+
     padding: 0;
     justify-content: flex-start;
   }
-  .crewTech .swiper-slide {
+  .crew .swiper-slide {
     display: flex;
   }
 }

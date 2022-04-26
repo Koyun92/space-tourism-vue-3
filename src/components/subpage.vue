@@ -3,9 +3,13 @@
     <div class="subpage__header">
       <div v-if="data.role" class="subpage__pretitle">{{ data.role }}</div>
       <div class="subpage__lower-title">
+        <h3 class="technology__pretitle subpage__pretitle-second">
+          the terminology
+        </h3>
         <h2 class="destination__slide-title" v-if="data.travel">
           {{ data.name }}
         </h2>
+
         <h2 v-else>
           {{ data.name }}
         </h2>
