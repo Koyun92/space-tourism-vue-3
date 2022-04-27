@@ -5,7 +5,7 @@
       <span>01</span>
       <h1>meet your crew</h1>
     </div>
-    <div class="supage__container"></div>
+
     <img
       class="subpage__img subpage__img--crew"
       :src="

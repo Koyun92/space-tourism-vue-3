@@ -8,11 +8,22 @@
     </div>
     <div class="subpage__img-container">
       <img
-        class="subpage__img subpage__img--technology"
+        class="subpage__img subpage__img--technology-sm"
         :src="
           require(`../assets${$route.path}/image-${data[this.currentIndex].name
             .replace(' ', '-')
             .toLowerCase()}-landscape.jpg`)
+        "
+        :alt="data.name"
+      />
+      <img
+        class="
+          subpage__img subpage__img--technology subpage__img--technology-lg
+        "
+        :src="
+          require(`../assets${$route.path}/image-${data[this.currentIndex].name
+            .replace(' ', '-')
+            .toLowerCase()}-portrait.jpg`)
         "
         :alt="data.name"
       />
@@ -23,7 +34,7 @@
       :modules="modules"
       class="mySwiper"
       :slides-per-view="1"
-      :space-between="50"
+      :space-between="80"
       @swiper="onSwiper"
       @slideChange="onSlide"
     >
@@ -142,18 +153,35 @@ export default {
 @media (min-width: 1024px) {
   .technology .swiper {
     display: flex;
-    flex-direction: column;
-
-    flex-basis: 45%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 50%;
     margin: 0;
+    padding: 0;
+  }
+  .technology .swiper-slide {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding-right: 8rem;
   }
   .technology .swiper-pagination {
     max-width: none;
     padding: 0;
+    margin: 0 3rem 0 0;
     justify-content: flex-start;
+    align-items: flex-start;
+    flex-basis: auto;
+    flex-direction: column;
   }
   .technology .swiper-slide {
     display: flex;
+  }
+  .technology .swiper-pagination-bullet {
+    margin: 0 0 4rem !important;
+    width: 6rem;
+    height: 6rem;
+    font-size: 3rem;
+    z-index: 100;
   }
 }
 </style>
