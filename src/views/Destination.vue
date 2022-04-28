@@ -93,15 +93,14 @@ export default {
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
-  width: 100%;
-  max-width: 400px;
   margin: auto;
+  max-width: 400px;
 }
 .destination .swiper-pagination-bullet {
   color: hsla(231, 77%, 90%, 1);
   letter-spacing: 0.235rem;
   opacity: 1;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   padding-bottom: 1rem;
   border-bottom: 1px solid transparent;
@@ -118,7 +117,6 @@ export default {
   .destination .swiper {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 
     flex-basis: 45%;
     margin: 0;
@@ -126,8 +124,12 @@ export default {
   .destination .swiper-pagination {
     max-width: none;
     margin-bottom: 4rem;
+    justify-content: flex-start;
     padding: 0;
     text-align: left;
+  }
+  .destination .swiper-pagination-bullet {
+    margin-right: 3rem !important;
   }
   .destination .swiper-slide {
     display: flex;

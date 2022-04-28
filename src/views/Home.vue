@@ -13,7 +13,9 @@
         experience!
       </p>
     </div>
-    <button class="home__btn">explore</button>
+    <button @click="this.$router.push(`destination`)" class="home__btn">
+      explore
+    </button>
   </div>
 </template>
 <script>
