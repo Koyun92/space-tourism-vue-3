@@ -32,8 +32,6 @@
       ref="mySwiper"
       :pagination="pagination"
       :modules="modules"
-      :touchAngel="1000"
-      :edgeSwipeThreshold="1000"
       class="mySwiper"
       :slides-per-view="1"
       :space-between="80"

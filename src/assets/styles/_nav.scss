@@ -53,9 +53,17 @@
         height: 100vh;
         z-index: 90;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        
         background-color: $background-menu;
         position: fixed;
     }
+    @-moz-document url-prefix() {
+        &__mobile {
+          background-color:black;
+         
+        }
+      }
 
     &__desktop {
         display: none;
